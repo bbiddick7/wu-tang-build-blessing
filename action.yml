@@ -1,0 +1,24 @@
+name: 'Wu-Tang Build Blessing'
+description: 'Bless your CI/CD pipeline with Wu-Tang wisdom. Wu-Tang is for the children.'
+author: 'Your Name'
+branding:
+  icon: 'shield'
+  color: 'yellow'
+
+inputs:
+  style:
+    description: 'Output style: "banner" (full ASCII art), "compact" (one-liner), or "verse" (with quote)'
+    required: false
+    default: 'banner'
+  fail-on-friday:
+    description: 'Fail the build on Fridays (because no deploys on Friday). Default: false'
+    required: false
+    default: 'false'
+
+outputs:
+  blessing:
+    description: 'The blessing message that was printed'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

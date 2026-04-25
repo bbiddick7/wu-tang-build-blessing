@@ -1,0 +1,22 @@
+name: CI with Wu-Tang Blessing
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  bless-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Bless the build
+        uses: your-username/wu-tang-build-blessing@v1
+        with:
+          style: banner
+
+      - name: Run your actual build steps here
+        run: echo "Build, test, deploy — protected by Wu-Tang."
